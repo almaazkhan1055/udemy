@@ -3546,4 +3546,407 @@ export const HomePageData = {
       },
     ],
   },
+  plans: {
+    heading: "Accelerate growth — for you or your organization",
+    desc: "Reach goals faster with one of our plans or programs. Try one free today or contact sales to learn more.",
+    planCards: [
+      {
+        name: "Personal Plan",
+        audience: "For you",
+        details: "Individual",
+        price: "Starting at ₹850 per month",
+        billing: "Billed monthly or annually. Cancel anytime.",
+        btnText: "Start Subscription",
+        features: [
+          "Access to 12,000+ top courses",
+          "Certification prep",
+          "Goal-focused recommendations",
+          "AI-powered coding exercises",
+        ],
+      },
+      {
+        name: "Team Plan",
+        audience: "For your team",
+        details: "2 to 20 people",
+        price: "₹1,167 a month per user",
+        billing: "Billed annually. Cancel anytime.",
+        btnText: "Start Subscription",
+        features: [
+          "Access to 12,000+ top courses",
+          "Certification prep",
+          "Goal-focused recommendations",
+          "AI-powered coding exercises",
+          "Analytics and adoption reports",
+        ],
+      },
+      {
+        name: "Enterprise Plan",
+        audience: "For your whole organization",
+        details: "More than 20 people",
+        price: "Contact sales for pricing",
+        billing: null,
+        btnText: "Request a Demo",
+        features: [
+          "Access to 27,000+ top courses",
+          "Certification prep",
+          "Goal-focused recommendations",
+          "AI-powered coding exercises",
+          "Advanced analytics and insights",
+          "Dedicated customer success team",
+          "International course collection featuring 15 languages",
+          "Customizable content",
+          "Hands-on tech training with add-on",
+          "Strategic implementation services with add-on",
+        ],
+      },
+    ],
+  },
+  reviews: {
+    heading: "See what others are achieving through learning",
+    reviewCards: [
+      {
+        review:
+          "Udemy was rated the most popular online course or certification program for learning how to code according to StackOverflow’s 2023 Developer survey.",
+        img: "https://cms-images.udemycdn.com/96883mtakkm8/2PBcNgsQa3SvYWklkiN27r/5b8707cc79c8cae5774d5eb3b88b4001/logo_stackoverflow.svg",
+        about: "37,076 responses collected",
+        link: {
+          name: "View Web Development courses",
+          href: "#",
+        },
+      },
+      {
+        review:
+          "Udemy was truly a game-changer and a great guide for me as we brought Dimensional to life.",
+        img: "https://cms-images.udemycdn.com/96883mtakkm8/1Djz6c0gZLaCG5SQS3PgUY/54b6fb8c85d8da01da95cbb94fa6335f/Alvin_Lim.jpeg",
+        name: "Alvin Lim",
+        about: "Technical Co-Founder, CTO at Dimensional",
+        link: {
+          name: "View this iOS & Swift course",
+          href: "#",
+        },
+      },
+      {
+        review:
+          "Udemy gives you the ability to be persistent. I learned exactly what I needed to know in the real world. It helped me sell myself to get a new role.",
+        img: "https://cms-images.udemycdn.com/96883mtakkm8/6dT7xusLHYoOUizXeVqgUk/4317f63fe25b2e07ad8c70cda641014b/William_A_Wachlin.jpeg",
+        name: "William A. Wachlin",
+        about: "Partner Account Manager at Amazon Web Services",
+        link: {
+          name: "View this AWS course",
+          href: "#",
+        },
+      },
+      {
+        review:
+          "With Udemy Business employees were able to marry the two together, technology and consultant soft skills... to help drive their careers forward.",
+        img: "https://cms-images.udemycdn.com/96883mtakkm8/4w9dYD4F64ibQwsaAB01Z4/c4610e9b1ac65589d8b1374ad10714e2/Ian_Stevens.png",
+        name: "Ian Stevens",
+        about:
+          "Head of Capability Development, North America at Publicis Sapient",
+        link: {
+          name: "Read full story",
+          href: "#",
+        },
+      },
+    ],
+  },
+  trending: {
+    heading: "Top trends for the future of work",
+    desc: "Our 2025 Global Learning & Skills Trends Report is out now! Find out how to build the skills to keep pace with change.",
+    btn: "Get the report",
+    img: "https://cms-images.udemycdn.com/96883mtakkm8/1qvvR0FDKv9chruIpia6Sc/b2af22a0097e47de4e4354237e3f378c/Onsite_Desktop_GLSTR25.png",
+  },
+  topTrending: {
+    heading: "Trending Now",
+    cards: [
+      {
+        title: "ChatGPT is a top skill",
+        courses: [
+          {
+            name: "See ChatGPT courses",
+            learners: "3,864,279",
+            btn: "Show all trending skills",
+          },
+        ],
+      },
+      {
+        title: "Development",
+        courses: [
+          {
+            name: "Python",
+            learners: "46,596,587",
+          },
+          {
+            name: "Web Development",
+            learners: "13,781,259",
+          },
+          {
+            name: "Data Science",
+            learners: "7,566,437",
+          },
+        ],
+      },
+      {
+        title: "Design",
+        courses: [
+          {
+            name: "Blender",
+            learners: "2,814,226",
+          },
+          {
+            name: "Graphic Design",
+            learners: "4,408,781",
+          },
+          {
+            name: "User Experience (UX) Design",
+            learners: "2,026,710",
+          },
+        ],
+      },
+      {
+        title: "Business",
+        courses: [
+          {
+            name: "PMI Project Management Professional (PMP)",
+            learners: "2,446,253",
+          },
+          {
+            name: "Microsoft Power BI",
+            learners: "4,415,631",
+          },
+          {
+            name: "Project Management",
+            learners: "3,818,974",
+          },
+        ],
+      },
+    ],
+  },
+  viewersFav: {
+    heading: "Learners are viewing",
+    courses: [
+      {
+        name: "React- The Complete Guide 2024",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+        rating: "4.6",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Moder React with Redux 2024",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/705264_caa9_13.jpg",
+        rating: "4.9",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Complete React Js Course",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/3033196_e7f4_3.jpg",
+        rating: "4.7",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "React Basics in 1 hour",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/837094_75da_2.jpg",
+        rating: "4.5",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Complete React Developer",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/2365628_0b60_9.jpg",
+        rating: "4.9",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "The Ultimate React Course",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/4471614_361e_8.jpg",
+        rating: "4.6",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "React Js Crash course",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/4774346_6916_2.jpg",
+        rating: "4.9",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Node with React",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/1254420_f6cb_4.jpg",
+        rating: "4.6",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "React- The Complete Guide 2024",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+        rating: "4.6",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Moder React with Redux 2024",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/705264_caa9_13.jpg",
+        rating: "4.9",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Complete React Js Course",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/3033196_e7f4_3.jpg",
+        rating: "4.7",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "React Basics in 1 hour",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/837094_75da_2.jpg",
+        rating: "4.5",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Complete React Developer",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/2365628_0b60_9.jpg",
+        rating: "4.9",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "The Ultimate React Course",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/4471614_361e_8.jpg",
+        rating: "4.6",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "React Js Crash course",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/4774346_6916_2.jpg",
+        rating: "4.9",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+      {
+        name: "Node with React",
+        tutor: ["Kalim khan", "Talib chowdhary", "Aftab Khan"],
+        image: "https://img-c.udemycdn.com/course/240x135/1254420_f6cb_4.jpg",
+        rating: "4.6",
+        buyers: "41,388",
+        price: "2,699",
+        tag: "BestSeller",
+      },
+    ],
+  },
+  article: [
+    {
+      articleCard: {
+        img: "https://cms-images.udemycdn.com/content/c4gpjcmcsk/png/UB_Case_Studies_Booz_Allen_image.png?position=c&quality=80&x.app=portals",
+        logo: "https://cms-images.udemycdn.com/96883mtakkm8/5V0hDnhhh2fSRa52V5cSEo/bde951fca77bf8b4f8010a60679b4ce4/logo-boozallenhamilton-2.svg",
+        heading:
+          "Booz Allen Hamilton Unlocks Talent Retention and Productivity Through Upskilling",
+        acheivements: [
+          {
+            percent: "93%",
+            desc: "retention rate among participating employees",
+          },
+          {
+            percent: "65%",
+            desc: "of learners noted a positive impact on their productivity",
+          },
+        ],
+        btn: "Read full story",
+      },
+    },
+    {
+      articleCard: {
+        img: "https://cms-images.udemycdn.com/96883mtakkm8/3tdKdJqRtZAyDDmdZR3qGV/eaf1d940743664c58edc9260842498d7/capitalone-2x.png",
+        logo: "https://cms-images.udemycdn.com/96883mtakkm8/4xxiw3L8tPFq9If2UpielM/44483c55e7e23bd33472d30fa122982d/logo-capitalone-2.svg",
+        heading:
+          "Capital One Accelerates Transformational Learning through Udemy Business",
+        acheivements: [
+          {
+            percent: "95%",
+            desc: "of learners rated Udemy as “very helpful” to their success",
+          },
+          {
+            percent: "65%",
+            desc: "increase in retention for in-demand tech roles",
+          },
+        ],
+        btn: "Read full story",
+      },
+    },
+    {
+      articleCard: {
+        img: "https://cms-images.udemycdn.com/96883mtakkm8/2OmbIN8MOcdVxDzlqQz4Dc/3471754f5a5f41a7f1c49f05ecfaa4b8/eventbrite-2x.png",
+        logo: "https://cms-images.udemycdn.com/96883mtakkm8/7t3OTcocacVyt6MzWIMtZT/9e7032d7afda76eaa05a30950af8035f/logo-eventbrite-1.svg",
+        heading:
+          "Eventbrite Navigates Change Through Skill-Building and Leadership Development",
+        acheivements: [
+          {
+            percent: "4,800+",
+            desc: "increase in employee enrollments for professional development courses",
+          },
+          {
+            percent: "65%",
+            desc: "revenue growth supported by a business model backed by learning",
+          },
+        ],
+        btn: "Read full story",
+      },
+    },
+    {
+      articleCard: {
+        img: "https://cms-images.udemycdn.com/96883mtakkm8/2BWi1GI2khQbIOymlyEhzB/673c2d81fe7c9314d0673e42e666f2b9/toyota-2x.png",
+        logo: "https://cms-images.udemycdn.com/96883mtakkm8/3rU6Qg7IG5NO7SCObXcMvq/80c5abf606ffa38350717a0eec38e933/logo-toyota-1.svg",
+        heading:
+          "Toyota Tsusho Enhances its L&D Program to Improve Employee Outcomes",
+        acheivements: [
+          {
+            percent: "50%",
+            desc: "training cost reduction per person",
+          },
+          {
+            percent: "+7,000",
+            desc: "hours of upskilling",
+          },
+        ],
+        btn: "Read full story",
+      },
+    },
+  ],
 };

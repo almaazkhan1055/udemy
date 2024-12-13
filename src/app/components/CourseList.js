@@ -6,10 +6,14 @@ const CourseList = () => {
   const { courseList } = HomePageData;
 
   return (
-    <div className="my-10">
-      <h2 className="text-[36px] font-bold">{courseList.heading}</h2>
-      <p className="text-[20px] text-gray-500 mb-10">{courseList.desc}</p>
-      <CourseTabs tabsData={courseList.tabsData} />
+    <div className="bg-[#F7F9FA]">
+      <div className="my-10 p-10 bg-white">
+        <h2 className="text-3xl font-bold text-gray-900">
+          {courseList.heading}
+        </h2>
+        <p className="text-lg text-gray-500 mb-10">{courseList.desc}</p>
+        <CourseTabs tabsData={courseList.tabsData} />
+      </div>
     </div>
   );
 };

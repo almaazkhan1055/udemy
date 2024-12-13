@@ -44,7 +44,7 @@ const Carousel = ({ items, renderItem }) => {
   };
 
   return (
-    <div className="relative my-10 bg-[#F7F9FA] px-10">
+    <div className="relative my-10 bg-[#F7F9FA]">
       <div
         className="flex items-center justify-between gap-5 overflow-x-scroll scroll-smooth scrollbar-hide"
         ref={scrollContainerRef}
@@ -58,7 +58,7 @@ const Carousel = ({ items, renderItem }) => {
       {showLeftButton && (
         <button
           onClick={handleScrollLeft}
-          className="absolute left-2 bg-black text-white p-2 rounded-full hover:bg-white hover:text-black text-2xl font-bold top-[50%] -translate-y-[50%]"
+          className="absolute left-0 bg-black text-white p-2 rounded-full hover:bg-white hover:text-black text-2xl font-bold top-[50%] -translate-y-[50%]"
         >
           <FaChevronLeft />
         </button>
@@ -67,7 +67,7 @@ const Carousel = ({ items, renderItem }) => {
       {showRightButton && (
         <button
           onClick={handleScrollRight}
-          className="absolute right-2 bg-black text-white p-2 rounded-full hover:bg-white hover:text-black text-2xl font-bold top-[50%] -translate-y-[50%]"
+          className="absolute right-0 bg-black text-white p-2 rounded-full hover:bg-white hover:text-black text-2xl font-bold top-[50%] -translate-y-[50%]"
         >
           <FaChevronRight />
         </button>

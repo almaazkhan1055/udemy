@@ -5,17 +5,20 @@ import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const WhatWeOfferCard = ({ WhatWeOffer }) => {
-  const [imgIndex, setImgIndex] = useState(0);
-  console.log(imgIndex);
+  const [currIndex, setCurrIndex] = useState(0);
 
   return (
     <div className="flex items-center justify-between gap-36">
       <div className="flex flex-col gap-5 my-10">
         {WhatWeOffer.map((offer, index) => (
           <div
-            onClick={() => setImgIndex(index)}
+            onClick={() => setCurrIndex(index)}
             key={index}
-            className="flex items-center p-5 gap-5 bg-white rounded-lg cursor-pointer"
+            className={`flex items-center p-5 gap-5 bg-white rounded-lg cursor-pointer hover:bg-gray-200 ${
+              index === currIndex
+                ? "border border-purple-500 border-l-8"
+                : "border-none"
+            }`}
           >
             <Image
               width={64}
@@ -49,9 +52,9 @@ const WhatWeOfferCard = ({ WhatWeOffer }) => {
       <Image
         height={600}
         width={600}
-        key={imgIndex}
-        src={WhatWeOffer[imgIndex].img}
-        alt={`Offer ${imgIndex}`}
+        key={currIndex}
+        src={WhatWeOffer[currIndex].img}
+        alt={`Offer ${currIndex}`}
         objectFit="cover"
       />
     </div>

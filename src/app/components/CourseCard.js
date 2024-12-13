@@ -22,7 +22,7 @@ const CourseCard = ({ courseCard }) => {
                 {course.name}
               </h4>
               <p className="text-gray-500">
-                {course.tutor.map((tutor, index) => (
+                {course?.tutor?.map((tutor, index) => (
                   <span key={index}>{tutor}, </span>
                 ))}
               </p>
