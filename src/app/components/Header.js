@@ -6,10 +6,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { IoMdSearch } from "react-icons/io";
+import { IoSearchSharp } from "react-icons/io5";
+import { CiGlobe } from "react-icons/ci";
 
 const Header = () => {
   const { header } = HomePageData;
-  const { logo, input, links, userOptions, languageSelector } = header;
+  const { logo, links, userOptions } = header;
 
   const [isExploreHovered, setIsExploreHovered] = useState(false);
   const [isCategoryHovered, setIsCategoryHovered] = useState(false);
@@ -56,16 +58,18 @@ const Header = () => {
             </Link>
           ))}
           <div className="relative border-[1px] border-black p-2 flex items-center justify-center">
-            <button className="text-gray-900">{languageSelector.icon}</button>
+            <button className="text-gray-900">
+              <CiGlobe className="text-xl" />
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="bg-white px-5 flex items-center justify-between">
+      <div className="bg-white p-5 flex items-center justify-between">
         <div className="text-2xl md:hidden" onClick={() => setHamOpen(true)}>
           <IoMenu />
         </div>
-        <div>{logo}</div>
+        <img src={logo} about="logo" width={91} />
         <div className="text-2xl md:hidden flex items-center gap-2">
           <IoMdSearch />
           <MdOutlineShoppingCart />
@@ -100,9 +104,8 @@ const Header = () => {
               </ul>
             </div>
           )}
-          <div className="px-3 py-1 border-[1px] border-black rounded-full flex items-center gap-5 bg-[#f7f9fa]">
-            {input}
-
+          <div className="px-3 py-1 border-[1px] border-black rounded-full flex items-center gap-5 bg-[#f7f9fa] text-2xl">
+            <IoSearchSharp color="gray" />
             <input
               type="text"
               placeholder="Search for anything"
@@ -119,6 +122,7 @@ const Header = () => {
               </Link>
             </div>
           ))}
+          <MdOutlineShoppingCart className="text-xl" />
         </div>
         <div className="md:flex hidden justify-between items-center">
           <div className="flex gap-2 items-center">
@@ -137,7 +141,9 @@ const Header = () => {
             ))}
 
             <div className="relative border-[1px] border-black p-2 flex items-center justify-center">
-              <button className="text-gray-900">{languageSelector.icon}</button>
+              <button className="text-gray-900">
+                <CiGlobe className="text-xl" />
+              </button>
             </div>
           </div>
         </div>

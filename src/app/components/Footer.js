@@ -3,7 +3,6 @@ import { HomePageData } from "../Data/HomePageData";
 
 const Footer = () => {
   const { footer1, footer2, footer3 } = HomePageData.footer;
-  console.log("footer3", footer3);
 
   return (
     <div className="flex flex-col">
