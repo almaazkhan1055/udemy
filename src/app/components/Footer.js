@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-wrap items-center md:justify-between max-md:gap-5">
           <h3 className="text-lg font-bold">{footer1.heading}</h3>
           {footer1.img.map((img, index) => (
-            <img src={img} alt={index} />
+            <img src={img} key={index} alt="companies" />
           ))}
         </div>
       </div>
@@ -36,7 +36,7 @@ const Footer = () => {
             <div key={index}>
               <h4 className="font-semibold mb-3">{card.title}</h4>
               {card.items.map((item, index) => (
-                <div key={index}>
+                <div key={index * 2}>
                   <span>{item}</span>
                 </div>
               ))}

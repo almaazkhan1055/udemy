@@ -20,7 +20,7 @@ const Review = () => {
           >
             <img
               src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
-              alt={reviewCard.name}
+              alt="...img"
               width={20}
             />
             <h3 className="text-[15px]">{reviewCard.review}</h3>
@@ -30,7 +30,7 @@ const Review = () => {
                 width={50}
                 height={50}
                 className="rounded-full"
-                alt={reviewCard.name}
+                alt="...img"
               />
               <div className="text-[12px] text-gray-500 font-semibold ">
                 <p>{reviewCard.name}</p>
