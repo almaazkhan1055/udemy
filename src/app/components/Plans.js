@@ -1,17 +1,18 @@
 import React from "react";
-import { HomePageData } from "../Data/HomePageData";
 import { FaArrowRight } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
 
-const Plans = () => {
-  const { plans } = HomePageData;
-
+const Plans = ({ data }) => {
   return (
     <div className="p-10">
-      <h2 className="text-3xl font-bold text-gray-900">{plans.heading}</h2>
-      <p className="text-lg text-gray-500 mb-10">{plans.desc}</p>
-      <div className="flex max-md:flex-wrap items-center justify-between gap-5">
-        {plans.planCards.map((planCard, index) => (
+      <h2 className="text-3xl font-bold text-gray-900">{data?.heading}</h2>
+      <p className="text-lg text-gray-500 mb-10">{data?.desc}</p>
+      <div
+        className={`flex max-md:flex-wrap items-center justify-between gap-5 ${
+          data ? "" : "animate-pulse w-full bg-gray-200"
+        }`}
+      >
+        {data?.planCards.map((planCard, index) => (
           <div
             key={index}
             className={`border border-gray-200 shadow-md border-t-[8px] ${

@@ -1,7 +1,6 @@
 "use client";
 import { FaAngleRight } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { HomePageData } from "@/app/Data/HomePageData";
 import Link from "next/link";
 import React, { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
@@ -9,10 +8,7 @@ import { IoMdSearch } from "react-icons/io";
 import { IoSearchSharp } from "react-icons/io5";
 import { CiGlobe } from "react-icons/ci";
 
-const Header = () => {
-  const { header } = HomePageData;
-  const { logo, links, userOptions } = header;
-
+const Header = ({ data }) => {
   const [isExploreHovered, setIsExploreHovered] = useState(false);
   const [isCategoryHovered, setIsCategoryHovered] = useState(false);
   const [hamOpen, setHamOpen] = useState(false);
@@ -33,7 +29,7 @@ const Header = () => {
         >
           <IoClose />
         </div>
-        {links.slice(0, links.length - 1).map((link, index) => (
+        {data?.links.slice(0, data?.links.length - 1).map((link, index) => (
           <div key={index}>
             <Link
               href={link.url}
@@ -44,7 +40,7 @@ const Header = () => {
           </div>
         ))}
         <div className="flex mt-5 gap-2 items-center">
-          {userOptions.map((option, index) => (
+          {data?.userOptions.map((option, index) => (
             <Link
               key={index}
               href="#"
@@ -65,11 +61,15 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="bg-white p-5 flex items-center justify-between">
+      <div
+        className={`bg-white p-5 flex items-center justify-between ${
+          data ? "" : "animate-pulse"
+        }`}
+      >
         <div className="text-2xl md:hidden" onClick={() => setHamOpen(true)}>
           <IoMenu />
         </div>
-        <img src={logo} about="logo" width={91} />
+        <img src={data?.logo} about="logo" width={91} />
         <div className="text-2xl md:hidden flex items-center gap-2">
           <IoMdSearch />
           <MdOutlineShoppingCart />
@@ -79,15 +79,15 @@ const Header = () => {
             className="cursor-pointer"
             onClick={() => setIsExploreHovered((prev) => !prev)}
           >
-            {links[0].name}
+            {data?.links[0].name}
           </span>
           {isExploreHovered && (
             <div className="absolute left-26 top-[85px] bg-white shadow-lg p-4 z-10">
               <div className="font-bold mb-2 text-gray-600">
-                {header.menu.title}
+                {data?.header.menu.title}
               </div>
               <ul>
-                {header.menu.categories.map((category, idx) => (
+                {data?.header.menu.categories.map((category, idx) => (
                   <li
                     key={idx}
                     className="py-1 flex items-center justify-between gap-10"
@@ -112,7 +112,7 @@ const Header = () => {
               className="border-none w-[300px] bg-transparent font-semibold focus:outline-none"
             />
           </div>
-          {links.slice(1).map((link, index) => (
+          {data?.links.slice(1).map((link, index) => (
             <div key={index} className="relative">
               <Link
                 href={link.url}
@@ -126,7 +126,7 @@ const Header = () => {
         </div>
         <div className="md:flex hidden justify-between items-center">
           <div className="flex gap-2 items-center">
-            {userOptions.map((option, index) => (
+            {data?.userOptions.map((option, index) => (
               <Link
                 key={index}
                 href={option.url}
@@ -150,10 +150,10 @@ const Header = () => {
         {isCategoryHovered && (
           <div className="bg-white overflow-hidden absolute top-[85px] left-[430px]">
             <div className="font-bold mb-2 text-gray-600 mt-4">
-              {header.menu.title}
+              {data?.header.menu.title}
             </div>
             <ul>
-              {header.menu.categories.map((category, idx) => (
+              {data?.header.menu.categories.map((category, idx) => (
                 <li
                   key={idx}
                   className="py-1 flex items-center justify-between gap-10"

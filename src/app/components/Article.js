@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { HomePageData } from "../Data/HomePageData";
 
-const Article = () => {
-  const { article } = HomePageData;
+const Article = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % article.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data?.length);
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? article.length - 1 : prevIndex - 1
+      prevIndex === 0 ? data?.length - 1 : prevIndex - 1
     );
   };
 
@@ -27,12 +25,16 @@ const Article = () => {
           className="flex transition-transform duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {article.map((card, index) => (
+          {data?.map((card, index) => (
             <div
               key={index}
               className="flex items-center flex-wrap-reverse justify-between min-w-full "
             >
-              <div className="p-10 max-md:py-0 pr-16 flex flex-col gap-8 md:w-1/2">
+              <div
+                className={`p-10 max-md:py-0 pr-16 flex flex-col gap-8 md:w-1/2 ${
+                  data ? "" : "animate-pulse w-full bg-gray-200"
+                }`}
+              >
                 <div className="flex items-center justify-start">
                   <img
                     src={card.articleCard.logo}
@@ -64,7 +66,11 @@ const Article = () => {
                   </button>
                 </div>
               </div>
-              <div className="md:w-1/2 md:pr-10">
+              <div
+                className={`md:w-1/2 md:pr-10 ${
+                  data ? "" : "animate-pulse w-full bg-gray-200"
+                }`}
+              >
                 <img
                   alt={card.articleCard.heading}
                   src={card.articleCard.img}
@@ -84,7 +90,7 @@ const Article = () => {
             <FaChevronLeft />
           </button>
           <div className="flex gap-2 justify-between items-center">
-            {article.map((_, index) => (
+            {data?.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleIndicatorClick(index)}

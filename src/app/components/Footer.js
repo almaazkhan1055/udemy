@@ -1,23 +1,24 @@
 import React from "react";
-import { HomePageData } from "../Data/HomePageData";
 
-const Footer = () => {
-  const { footer1, footer2, footer3 } = HomePageData.footer;
-
+const Footer = ({ data }) => {
   return (
-    <div className="flex flex-col">
+    <div
+      className={`flex flex-col ${
+        data ? "" : "animate-pulse w-full bg-gray-200"
+      }`}
+    >
       <div className="px-10 py-5 bg-[#1c1d1f] text-white border-y-white border-y">
         <div className="flex flex-wrap items-center md:justify-between max-md:gap-5">
-          <h3 className="text-lg font-bold">{footer1.heading}</h3>
-          {footer1.img.map((img, index) => (
+          <h3 className="text-lg font-bold">{data?.footer1.heading}</h3>
+          {data?.footer1.img.map((img, index) => (
             <img src={img} key={index} alt="companies" />
           ))}
         </div>
       </div>
       <div className="bg-[#1c1d1f] text-white px-10 py-5 flex flex-col gap-10">
-        <h3 className="text-lg font-bold">{footer2.categories.title}</h3>
+        <h3 className="text-lg font-bold">{data?.footer2.categories.title}</h3>
         <div className="grid md:grid-cols-4 grid-cols-1 gap-8">
-          {footer2.categories.cards1.map((card, index) => (
+          {data?.footer2.categories.cards1.map((card, index) => (
             <div key={index}>
               <h4 className="font-semibold mb-3">{card.title}</h4>
               {card.items.map((item, index) => (
@@ -31,7 +32,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#101112] text-white px-10 py-5 flex flex-col gap-10">
         <div className="grid md:grid-cols-4 grid-cols-2 gap-8">
-          {footer2.categories.cards2.map((card, index) => (
+          {data?.footer2.categories.cards2.map((card, index) => (
             <div key={index}>
               <h4 className="font-semibold mb-3">{card.title}</h4>
               {card.items.map((item, index) => (
@@ -44,14 +45,14 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#101112] text-white px-10 py-5 flex max-md:flex-col md:items-center justify-between border-y border-y-white max-md:gap-2">
-        {footer3.links.map((link, index) => (
+        {data?.footer3.links.map((link, index) => (
           <div key={index}>
             {index === 0 ? (
               <div className="flex items-center gap-5">
-                <img src={footer3.logo} alt="...logo" width={92} />
+                <img src={data?.footer3.logo} alt="...logo" width={92} />
                 <h6>{link}</h6>
               </div>
-            ) : index === footer3.links.length - 1 ? (
+            ) : index === data?.footer3.links.length - 1 ? (
               <div className="flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

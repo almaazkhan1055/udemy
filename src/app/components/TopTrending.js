@@ -1,21 +1,27 @@
 import React from "react";
-import { HomePageData } from "../Data/HomePageData";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
 
-const TopTrending = () => {
-  const { topTrending } = HomePageData;
-
+const TopTrending = ({ data }) => {
   return (
     <div className="bg-[#F7F9FA] p-10">
       <div className="border border-b-gray-300 border-t-0 border-l-0 border-r-0">
         <h2 className="text-3xl font-bold text-gray-900 mb-5">
-          {topTrending.heading}
+          {data?.heading}
         </h2>
       </div>
-      <div className="flex flex-wrap justify-between">
-        {topTrending.cards.map((card) => (
-          <div key={card.title} className="md:my-10 my-5">
+      <div
+        className={`flex flex-wrap justify-between ${
+          data ? "" : "animate-pulse w-full bg-gray-200"
+        }`}
+      >
+        {data?.cards.map((card) => (
+          <div
+            key={card.title}
+            className={`md:my-10 my-5 ${
+              data ? "" : "animate-pulse w-full bg-gray-200"
+            }`}
+          >
             <h3
               className={`text-gray-900 font-bold ${
                 card.title === "ChatGPT is a top skill"

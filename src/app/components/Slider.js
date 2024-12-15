@@ -1,16 +1,17 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
-import { HomePageData } from "../Data/HomePageData";
 import Image from "next/image";
 import SliderBanner from "./SliderBanner";
 
-const Slider = () => {
-  const { carousel, sliderbanner } = HomePageData;
-
+const Slider = ({ data }) => {
   return (
-    <div className="relative h-56 sm:h-64 xl:h-96 2xl:h-96">
+    <div
+      className={`relative h-56 sm:h-64 xl:h-96 2xl:h-96 ${
+        data ? "" : "animate-pulse w-full bg-gray-200"
+      }`}
+    >
       <Carousel>
-        {carousel.map((img, index) => (
+        {data?.carousel.map((img, index) => (
           <div key={index} className="relative h-full">
             <Image
               src={img}
@@ -20,8 +21,8 @@ const Slider = () => {
             />
 
             <SliderBanner
-              heading={sliderbanner[index]?.heading}
-              description={sliderbanner[index]?.description}
+              heading={data?.sliderbanner[index]?.heading}
+              description={data?.sliderbanner[index]?.description}
             />
           </div>
         ))}

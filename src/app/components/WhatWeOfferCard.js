@@ -4,13 +4,19 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-const WhatWeOfferCard = ({ WhatWeOffer }) => {
+const WhatWeOfferCard = ({ data }) => {
   const [currIndex, setCurrIndex] = useState(0);
 
+  const currentData = data?.[currIndex];
+
   return (
-    <div className="md:flex items-center justify-between gap-36">
+    <div
+      className={`md:flex items-center justify-between gap-36 ${
+        data ? "" : "animate-pulse w-full bg-gray-200"
+      }`}
+    >
       <div className="flex flex-col gap-5 my-10">
-        {WhatWeOffer.map((offer, index) => (
+        {data?.map((offer, index) => (
           <div
             onClick={() => setCurrIndex(index)}
             key={index}
@@ -49,14 +55,16 @@ const WhatWeOfferCard = ({ WhatWeOffer }) => {
         ))}
       </div>
 
-      <Image
-        height={600}
-        width={600}
-        key={currIndex}
-        src={WhatWeOffer[currIndex].img}
-        alt={`Offer ${currIndex}`}
-        objectFit="cover"
-      />
+      {currentData && (
+        <Image
+          height={600}
+          width={600}
+          key={currIndex}
+          src={currentData.img}
+          alt={`Offer ${currIndex}`}
+          objectFit="cover"
+        />
+      )}
     </div>
   );
 };

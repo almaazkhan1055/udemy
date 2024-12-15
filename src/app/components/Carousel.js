@@ -50,7 +50,7 @@ const Carousel = ({ items, renderItem }) => {
         ref={scrollContainerRef}
         onScroll={updateButtonVisibility}
       >
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <div key={index}>{renderItem(item, index)}</div>
         ))}
       </div>

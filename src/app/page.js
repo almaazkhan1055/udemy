@@ -15,27 +15,28 @@ import Footer from "./components/Footer";
 
 const Home = () => {
   const [data, setData] = useState(null);
-  console.log("data", data);
+  console.log(data);
 
   useEffect(() => {
     fetch("https://almaazkhan1055.github.io/udemy_data/udemy-data.json")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+
   return (
     <>
-      <Header />
-      <Slider />
-      <CourseList />
-      <Testimonials />
-      <WhatWeOffer />
-      <Plans />
-      <Review />
-      <Trending />
-      <TopTrending />
-      <ViewersFav />
-      <Article />
-      <Footer />
+      <Header data={data?.header} />
+      <Slider data={data} />
+      <CourseList data={data?.courseList} />
+      <Testimonials data={data?.testimonials} />
+      <WhatWeOffer data={data?.whatWeOffer} />
+      <Plans data={data?.plans} />
+      <Review data={data?.reviews} />
+      <Trending data={data?.trending} />
+      <TopTrending data={data?.topTrending} />
+      <ViewersFav data={data?.viewersFav} />
+      <Article data={data?.article} />
+      <Footer data={data?.footer} />
     </>
   );
 };

@@ -1,15 +1,17 @@
 import React from "react";
-import { HomePageData } from "../Data/HomePageData";
 import WhatWeOfferCard from "./WhatWeOfferCard";
 
-const WhatWeOffer = () => {
-  const { WhatWeOffer } = HomePageData;
+const WhatWeOffer = ({ data }) => {
+  console.log("whatweoffer", data);
+
   return (
-    <div className="bg-[#F7F9FA] p-10">
-      <h2 className="text-3xl font-bold text-gray-900">
-        {WhatWeOffer.heading}
-      </h2>
-      <WhatWeOfferCard WhatWeOffer={WhatWeOffer.offers} />
+    <div
+      className={`bg-[#F7F9FA] p-10 ${
+        data ? "" : "animate-pulse w-full bg-gray-200"
+      }`}
+    >
+      <h2 className="text-3xl font-bold text-gray-900">{data?.heading}</h2>
+      <WhatWeOfferCard data={data?.offers} />
     </div>
   );
 };

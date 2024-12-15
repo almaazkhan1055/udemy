@@ -1,19 +1,20 @@
 import React from "react";
-import { HomePageData } from "../Data/HomePageData";
 import Image from "next/image";
 import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa";
 
-const Review = () => {
-  const { reviews } = HomePageData;
-
+const Review = ({ data }) => {
   return (
-    <div className="p-10 bg-[#F7F9FA]">
+    <div
+      className={`p-10 bg-[#F7F9FA] ${
+        data ? "" : "animate-pulse w-full bg-gray-200"
+      }`}
+    >
       <h2 className="text-3xl font-bold text-gray-900 mb-10">
-        {reviews.heading}
+        {data?.heading}
       </h2>
       <div className="flex max-md:flex-wrap items-center justify-between gap-5">
-        {reviews.reviewCards.map((reviewCard, index) => (
+        {data?.reviewCards.map((reviewCard, index) => (
           <div
             key={index}
             className="bg-white border border-gray-300 px-4 max-md:py-4 rounded-md flex flex-col items-start justify-center gap-2 md:w-[311px] md:h-[273px]"
