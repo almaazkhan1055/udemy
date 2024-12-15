@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Testimonials from "./components/Testimonials";
@@ -11,10 +11,11 @@ import Trending from "./components/Trending";
 import TopTrending from "./components/TopTrending";
 import ViewersFav from "./components/ViewersFav";
 import Article from "./components/Article";
+import Footer from "./components/Footer";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden">
+    <>
       <Header />
       <Slider />
       <CourseList />
@@ -26,7 +27,8 @@ const Home = () => {
       <TopTrending />
       <ViewersFav />
       <Article />
-    </div>
+      <Footer />
+    </>
   );
 };
 

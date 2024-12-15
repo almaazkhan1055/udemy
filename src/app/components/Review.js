@@ -12,15 +12,15 @@ const Review = () => {
       <h2 className="text-3xl font-bold text-gray-900 mb-10">
         {reviews.heading}
       </h2>
-      <div className="flex items-center justify-between gap-5">
+      <div className="flex max-md:flex-wrap items-center justify-between gap-5">
         {reviews.reviewCards.map((reviewCard, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-300 px-4 rounded-md flex flex-col items-start justify-center gap-2 w-[311px] h-[273px]"
+            className="bg-white border border-gray-300 px-4 max-md:py-4 rounded-md flex flex-col items-start justify-center gap-2 md:w-[311px] md:h-[273px]"
           >
             <img
               src="https://s.udemycdn.com/browse_components/student-quote-unit/quote.svg"
-              alt=""
+              alt={reviewCard.name}
               width={20}
             />
             <h3 className="text-[15px]">{reviewCard.review}</h3>

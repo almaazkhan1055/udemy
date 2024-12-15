@@ -8,7 +8,7 @@ const WhatWeOfferCard = ({ WhatWeOffer }) => {
   const [currIndex, setCurrIndex] = useState(0);
 
   return (
-    <div className="flex items-center justify-between gap-36">
+    <div className="md:flex items-center justify-between gap-36">
       <div className="flex flex-col gap-5 my-10">
         {WhatWeOffer.map((offer, index) => (
           <div

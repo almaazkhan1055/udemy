@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 const Trending = () => {
   const { trending } = HomePageData;
   return (
-    <div className="p-10 flex items-center justify-between">
+    <div className="p-10 flex max-md:flex-wrap items-center justify-between">
       <div className="w-[400px]">
         <h3 className="text-3xl font-bold text-gray-900 mb-5">
           {trending.heading}

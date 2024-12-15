@@ -44,7 +44,7 @@ const Carousel = ({ items, renderItem }) => {
   };
 
   return (
-    <div className="relative my-10 bg-[#F7F9FA]">
+    <div className="relative my-10">
       <div
         className="flex items-center justify-between gap-5 overflow-x-scroll scroll-smooth scrollbar-hide"
         ref={scrollContainerRef}

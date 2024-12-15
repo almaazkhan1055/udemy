@@ -10,7 +10,7 @@ const Plans = () => {
     <div className="p-10">
       <h2 className="text-3xl font-bold text-gray-900">{plans.heading}</h2>
       <p className="text-lg text-gray-500 mb-10">{plans.desc}</p>
-      <div className="flex items-center justify-between gap-5">
+      <div className="flex max-md:flex-wrap items-center justify-between gap-5">
         {plans.planCards.map((planCard, index) => (
           <div
             key={index}
@@ -18,7 +18,7 @@ const Plans = () => {
               planCard.name === "Personal Plan"
                 ? "border-t-[#A435F0]"
                 : "border-t-[#5022C3]"
-            }  h-[550px] w-[500px] rounded-md`}
+            }  md:h-[550px] md:w-[500px] rounded-md`}
           >
             <div className="bg-gray-50 p-4">
               <h3 className="font-bold text-lg">{planCard.name}</h3>

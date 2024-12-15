@@ -3949,4 +3949,140 @@ export const HomePageData = {
       },
     },
   ],
+  footer: {
+    footer1: {
+      heading:
+        "Top companies choose Udemy Business to build in-demand career skills.",
+      img: [
+        "https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg",
+        "https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg",
+        "https://s.udemycdn.com/partner-logos/v4/box-light.svg",
+        "https://s.udemycdn.com/partner-logos/v4/netapp-light.svg",
+        "https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg",
+      ],
+    },
+    footer2: {
+      categories: {
+        title: "Explore Top Skills and Certifications",
+        cards1: [
+          {
+            title: "Certifications by Issuer",
+            items: [
+              "Amazon Web Services (AWS) Certifications",
+              "Six Sigma Certifications",
+              "Microsoft Certifications",
+              "Cisco Certifications",
+              "Tableau Certifications",
+              "See all Certifications",
+            ],
+          },
+          {
+            title: "Web Development",
+            items: [
+              "Web Development",
+              "JavaScript",
+              "React JS",
+              "Angular",
+              "Java",
+            ],
+          },
+          {
+            title: "IT Certifications",
+            items: [
+              "Amazon AWS",
+              "AWS Certified Cloud Practitioner",
+              "AZ-900: Microsoft Azure Fundamentals",
+              "AWS Certified Solutions Architect - Associate",
+              "Kubernetes",
+            ],
+          },
+          {
+            title: "Leadership",
+            items: [
+              "Leadership",
+              "Management Skills",
+              "Project Management",
+              "Personal Productivity",
+              "Emotional Intelligence",
+            ],
+          },
+          {
+            title: "Certifications by Skill",
+            items: [
+              "Cybersecurity Certification",
+              "Project Management Certification",
+              "Cloud Certification",
+              "Data Analytics Certification",
+              "HR Management Certification",
+              "See all Certifications",
+            ],
+          },
+          {
+            title: "Data Science",
+            items: [
+              "Data Science",
+              "Python",
+              "Machine Learning",
+              "ChatGPT",
+              "Deep Learning",
+            ],
+          },
+          {
+            title: "Communication",
+            items: [
+              "Communication Skills",
+              "Presentation Skills",
+              "Public Speaking",
+              "Writing",
+              "PowerPoint",
+            ],
+          },
+          {
+            title: "Business Analytics & Intelligence",
+            items: [
+              "Microsoft Excel",
+              "SQL",
+              "Microsoft Power BI",
+              "Data Analysis",
+              "Business Analysis",
+            ],
+          },
+        ],
+        cards2: [
+          {
+            title: "About",
+            items: ["About us", "Careers", "Contact us", "Blog", "Investors"],
+          },
+          {
+            title: "Discovery Udemy",
+            items: [
+              "Get the app",
+              "Teach on Udemy",
+              "Plans and Pricing",
+              "Affiliate",
+              "Help and Support",
+              "Udemy for Business",
+            ],
+          },
+          {
+            title: "Udemy for Business",
+            items: ["Udemy Business"],
+          },
+          {
+            title: "Legal & Accessibility",
+            items: [
+              "Accessibility statement",
+              "Privacy policy",
+              "Sitemap",
+              "Terms",
+            ],
+          },
+        ],
+      },
+    },
+    footer3: {
+      logo: "https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg",
+      links: ["© 2024 Udemy, Inc.", "cookie settings", "English"],
+    },
+  },
 };

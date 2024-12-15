@@ -17,8 +17,8 @@ const CourseTabs = ({ tabsData }) => {
   };
 
   return (
-    <div className="bg-[#F7F9FA]">
-      <div className="flex items-center gap-10 border-b-[1px] border-gray-300 bg-white ">
+    <>
+      <div className="flex flex-wrap items-center md:gap-10 gap-5 border-b-[1px] border-gray-300 bg-white px-10">
         {tabsData?.map((tab, index) => (
           <div
             onClick={() => handleTabClick(index)}
@@ -33,37 +33,38 @@ const CourseTabs = ({ tabsData }) => {
           </div>
         ))}
       </div>
+      <div className="bg-[#F7F9FA] p-10 pt-0">
+        {courseTopics.length > 0 && (
+          <Carousel
+            items={courseTopics}
+            renderItem={(topic, index) => (
+              <div
+                className={`px-5 whitespace-nowrap py-2 cursor-pointer rounded-full border ${
+                  activeTopicIndex === index
+                    ? "bg-gray-800 text-white"
+                    : "bg-gray-200 text-gray-800"
+                }`}
+                onClick={() => setActiveTopicIndex(index)}
+              >
+                <h5 className="font-bold">{topic.name}</h5>
+                <span className="text-sm">{topic.totalLearners} +learners</span>
+              </div>
+            )}
+          />
+        )}
 
-      {courseTopics.length > 0 && (
-        <Carousel
-          items={courseTopics}
-          renderItem={(topic, index) => (
-            <div
-              className={`px-5 whitespace-nowrap py-2 cursor-pointer rounded-full border ${
-                activeTopicIndex === index
-                  ? "bg-gray-800 text-white"
-                  : "bg-gray-200 text-gray-800"
-              }`}
-              onClick={() => setActiveTopicIndex(index)}
-            >
-              <h5 className="font-bold">{topic.name}</h5>
-              <span className="text-sm">{topic.totalLearners} +learners</span>
-            </div>
-          )}
-        />
-      )}
+        {courseCards.length > 0 && (
+          <Carousel
+            items={courseCards}
+            renderItem={(course) => <CourseCard courseCard={[course]} />}
+          />
+        )}
 
-      {courseCards.length > 0 && (
-        <Carousel
-          items={courseCards}
-          renderItem={(course) => <CourseCard courseCard={[course]} />}
-        />
-      )}
-
-      <button className="my-10 border border-black px-5 py-3 text-black font-bold text-md hover:bg-gray-200">
-        Show All {activeTab?.name} Courses
-      </button>
-    </div>
+        <button className="my-10 border border-black px-5 py-3 text-black font-bold text-md hover:bg-gray-200">
+          Show All {activeTab?.name} Courses
+        </button>
+      </div>
+    </>
   );
 };
 

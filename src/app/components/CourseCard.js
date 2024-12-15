@@ -8,7 +8,7 @@ const CourseCard = ({ courseCard }) => {
         return (
           <div
             key={index}
-            className="border-2 border-gray-200 w-[300px] pt-0 rounded-md shadow-md"
+            className="border-2 border-gray-200 w-[300px] pt-0 rounded-md"
           >
             <Image
               width={300}

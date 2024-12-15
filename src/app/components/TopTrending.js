@@ -13,9 +13,9 @@ const TopTrending = () => {
           {topTrending.heading}
         </h2>
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-wrap justify-between">
         {topTrending.cards.map((card) => (
-          <div key={card.title} className="my-10">
+          <div key={card.title} className="md:my-10 my-5">
             <h3
               className={`text-gray-900 font-bold ${
                 card.title === "ChatGPT is a top skill"
