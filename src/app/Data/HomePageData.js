@@ -1,5 +1,3 @@
-import slider1 from "../assets/slider-1.jpg";
-import slider2 from "../assets/slider-2.jpg";
 export const HomePageData = {
   header: {
     logo: (
@@ -341,7 +339,10 @@ export const HomePageData = {
       options: ["English", "Español", "Français", "Deutsch", "中文"],
     },
   },
-  carousel: [slider1, slider2],
+  carousel: [
+    "https://img-c.udemycdn.com/notices/web_carousel_slide/image/e6cc1a30-2dec-4dc5-b0f2-c5b656909d5b.jpg",
+    "https://img-c.udemycdn.com/notices/web_carousel_slide/image/10ca89f6-811b-400e-983b-32c5cd76725a.jpg",
+  ],
   sliderbanner: [
     {
       heading: "Learning that gets you",

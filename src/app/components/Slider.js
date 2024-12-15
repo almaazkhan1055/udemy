@@ -12,7 +12,12 @@ const Slider = () => {
       <Carousel>
         {carousel.map((img, index) => (
           <div key={index} className="relative h-full">
-            <Image src={img} alt={index + "img"} className="w-full" />
+            <Image
+              src={img}
+              alt={index + "img"}
+              className="w-full"
+              layout="fill"
+            />
 
             <SliderBanner
               heading={sliderbanner[index]?.heading}
