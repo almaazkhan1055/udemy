@@ -1,4 +1,5 @@
 "use client";
+
 import { FaAngleRight } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Link from "next/link";
@@ -11,12 +12,13 @@ import { CiGlobe } from "react-icons/ci";
 const Header = ({ data }) => {
   const [isExploreHovered, setIsExploreHovered] = useState(false);
   const [isCategoryHovered, setIsCategoryHovered] = useState(false);
+  const [categoryIndex, setCategoryIndex] = useState(0);
   const [hamOpen, setHamOpen] = useState(false);
 
   return (
     <>
       <div
-        className={`px-10 py-5 md:hidden absolute bg-white font-bold w-full h-[250px] ${
+        className={`px-10 py-5 md:hidden absolute bg-white font-bold w-full h-[300px] ${
           hamOpen ? "translate-y-0" : "-translate-y-full"
         } transition-transform duration-300 ease-in-out`}
         style={{
@@ -77,24 +79,30 @@ const Header = ({ data }) => {
         <div className="md:flex hidden items-center justify-between gap-5">
           <span
             className="cursor-pointer"
-            onClick={() => setIsExploreHovered((prev) => !prev)}
+            onMouseEnter={() => {
+              setIsExploreHovered((prev) => !prev);
+              setIsCategoryHovered((prev) => !prev);
+            }}
           >
             {data?.links[0].name}
           </span>
           {isExploreHovered && (
             <div className="absolute left-26 top-[85px] bg-white shadow-lg p-4 z-10">
               <div className="font-bold mb-2 text-gray-600">
-                {data?.header.menu.title}
+                {data?.menu?.title}
               </div>
               <ul>
-                {data?.header.menu.categories.map((category, idx) => (
+                {data?.menu?.categories?.map((category, idx) => (
                   <li
                     key={idx}
                     className="py-1 flex items-center justify-between gap-10"
                   >
                     <span
-                      className="text-gray-800 hover:text-purple-500 flex justify-between gap-10"
-                      onClick={() => setIsCategoryHovered((prev) => !prev)}
+                      className="text-gray-800 hover:text-purple-500 cursor-pointer flex justify-between gap-10"
+                      onMouseEnter={() => {
+                        setIsCategoryHovered((prev) => !prev);
+                        setCategoryIndex(idx);
+                      }}
                     >
                       {category.name}
                     </span>
@@ -148,24 +156,24 @@ const Header = ({ data }) => {
           </div>
         </div>
         {isCategoryHovered && (
-          <div className="bg-white overflow-hidden absolute top-[85px] left-[430px]">
+          <div className="bg-white overflow-hidden absolute top-[85px] left-[430px] z-[1999]">
             <div className="font-bold mb-2 text-gray-600 mt-4">
-              {data?.header.menu.title}
+              Popular Issues
             </div>
-            <ul>
-              {data?.header.menu.categories.map((category, idx) => (
-                <li
-                  key={idx}
-                  className="py-1 flex items-center justify-between gap-10"
-                >
-                  <span className="text-gray-800 hover:text-purple-500  justify-between gap-10">
-                    {category.subcategories.map((sub, index) => {
-                      return <li key={index}>{sub}</li>;
-                    })}
-                  </span>
-                  <FaAngleRight />
-                </li>
-              ))}
+            <ul className="z-[1999]">
+              {data?.menu.categories[categoryIndex].subcategories.map(
+                (sub, index) => (
+                  <li
+                    key={index}
+                    className="py-1 flex items-center justify-between gap-10"
+                  >
+                    <span className="text-gray-800 hover:text-purple-500  justify-between gap-10">
+                      {sub}
+                    </span>
+                    <FaAngleRight />
+                  </li>
+                )
+              )}
             </ul>
           </div>
         )}

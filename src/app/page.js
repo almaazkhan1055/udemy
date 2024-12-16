@@ -15,7 +15,6 @@ import Footer from "./components/Footer";
 
 const Home = () => {
   const [data, setData] = useState(null);
-  console.log(data);
 
   useEffect(() => {
     fetch("https://almaazkhan1055.github.io/udemy_data/udemy-data.json")

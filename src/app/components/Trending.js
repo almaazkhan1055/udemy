@@ -2,8 +2,6 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const Trending = ({ data }) => {
-  console.log(data);
-
   return (
     <div className="p-10 flex max-md:flex-wrap items-center justify-between">
       <div

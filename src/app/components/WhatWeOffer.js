@@ -2,8 +2,6 @@ import React from "react";
 import WhatWeOfferCard from "./WhatWeOfferCard";
 
 const WhatWeOffer = ({ data }) => {
-  console.log("whatweoffer", data);
-
   return (
     <div
       className={`bg-[#F7F9FA] p-10 ${
