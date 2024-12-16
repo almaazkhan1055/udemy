@@ -9,7 +9,7 @@ const CourseList = ({ data }) => {
       }`}
     >
       <div className="md:my-10 max-md:pt-0 bg-white flex flex-col">
-        <h2 className="text-3xl font-bold text-gray-900 px-10">
+        <h2 className="text-3xl max-md:mt-10 font-bold text-gray-900 px-10">
           {data?.heading}
         </h2>
         <p className="text-lg text-gray-500 mb-10 px-10">{data?.desc}</p>
