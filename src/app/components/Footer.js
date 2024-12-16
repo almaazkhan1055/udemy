@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = ({ data }) => {
@@ -23,7 +24,9 @@ const Footer = ({ data }) => {
               <h4 className="font-semibold mb-3">{card.title}</h4>
               {card.items.map((item, index) => (
                 <div key={index}>
-                  <span>{item}</span>
+                  <Link href="#" className="hover:underline">
+                    {item}
+                  </Link>
                 </div>
               ))}
             </div>
@@ -37,7 +40,9 @@ const Footer = ({ data }) => {
               <h4 className="font-semibold mb-3">{card.title}</h4>
               {card.items.map((item, index) => (
                 <div key={index * 2}>
-                  <span>{item}</span>
+                  <Link href="#" className="hover:underline">
+                    {item}
+                  </Link>
                 </div>
               ))}
             </div>
